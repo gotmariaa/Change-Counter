@@ -1,54 +1,21 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+#This program will calculate the total amount of change you have
 
-# C extensions
-*.so
+def main():
 
-# Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
+    pennies = eval(input("Please input the amount of pennies that you have: "))
+    nickles = eval(input("Please input the amount of nickles that you have: "))
+    dimes = eval(input("Please input the amount of dimes that you have: "))
+    quarters = eval(input("Please input the amount of quarters that you have: "))
+    dollarcoins = eval(input("Please input the amount of dollar coins that you have: "))
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+    pennies = .01 * pennies
+    nickles = .05 * nickles
+    dimes = .10 * dimes
+    quarters = .25 * quarters
+    dollarcoins = 1.00 * dollarcoins
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+    sum = pennies + nickles + dimes + quarters + dollarcoins
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.cache
-nosetests.xml
-coverage.xml
+    print("You have a total of $",sum)
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
+main()
